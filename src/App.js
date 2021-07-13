@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-
 import StrangerThings from './components/StrangerThings';
 
 function App() {
   return (
     <div className="App">
-      <header>Em desenvolvimento</header>
+      {process.env.IS_IT_DEV === 'true' && <header>Em desenvolvimento</header>}
       <StrangerThings />
     </div>
   );
