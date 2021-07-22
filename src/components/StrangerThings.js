@@ -107,7 +107,16 @@ class StrangerThings extends React.Component {
     );
   }
 
+  isUnderDevelopment(string) {
+    let boolean = false;
+    if (string === 'true') { boolean = true; }
+    if (boolean) return (<h2>Em desenvolvimento</h2>);
+    console.log('roedei', string);
+    return '';
+  }
+
   render() {
+    const underDev = process.env.UNDER_DEVELOPMENT;
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
@@ -117,6 +126,7 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
+        {this.isUnderDevelopment(underDev)}
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
