@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       {
         process.env.REACT_APP_ENVIRONMENT === 'DEVELOPMENT'
-          ? <div>Em desenvolvimento...</div>
+          ? <div>Em desenvolvimento</div>
           : ''
       }
       <StrangerThings />
