@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <StrangerThings />
-      {/* testando */}
+      {/* testando parte 2 */}
     </div>
   );
 }
