@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-// Tiago Yoneda - fix
+// Tiago Yoneda - fix2
 ReactDOM.render(
   <React.StrictMode>
     <App />
