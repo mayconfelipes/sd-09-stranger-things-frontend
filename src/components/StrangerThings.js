@@ -3,20 +3,20 @@ import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
 // https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/ <- importando arquivo dotenv
-const backEnd = require('dotenv').config();
+require('dotenv').config();
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
 const strangerThingsConfig = {
-  url: backEnd.REACT_APP_HAWKINS_URL,
-  timeout: backEnd.REACT_APP_HAWKINS_TIMEOUT,
+  url: process.env.REACT_APP_HAWKINS_URL,
+  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
-  url: backEnd.REACT_APP_UPSIDEDOWN_URL,
-  timeout: backEnd.REACT_APP_UPSIDEDOWN_TIMEOUT,
+  url: process.env.REACT_APP_UPSIDEDOWN_URL,
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
