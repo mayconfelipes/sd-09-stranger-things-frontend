@@ -23,6 +23,12 @@ const upsideDownConfig = {
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
+function isUnderDevelopment() {
+  const underDev = process.env.UNDER_DEVELOPMENT;
+  if (underDev === 'true') return (<h2>Em desenvolvimento</h2>);
+  return '';
+}
+
 class StrangerThings extends React.Component {
   constructor(props) {
     super(props);
@@ -42,8 +48,6 @@ class StrangerThings extends React.Component {
 
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
-
-    this.isUnderDevelopment = this.isUnderDevelopment.bind(this);
   }
 
   handleInput(event) {
@@ -109,15 +113,7 @@ class StrangerThings extends React.Component {
     );
   }
 
-  isUnderDevelopment(string) {
-    let boolean = false;
-    if (string === 'true') { boolean = true; }
-    if (boolean) return (<h2>Em desenvolvimento</h2>);
-    return '';
-  }
-
   render() {
-    const underDev = process.env.UNDER_DEVELOPMENT;
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
@@ -128,7 +124,7 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
-          {this.isUnderDevelopment(underDev)}
+          {isUnderDevelopment()}
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
