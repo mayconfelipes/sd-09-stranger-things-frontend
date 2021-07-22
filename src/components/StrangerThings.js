@@ -1,5 +1,4 @@
 import React from 'react';
-import { process } from 'dotenv';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
