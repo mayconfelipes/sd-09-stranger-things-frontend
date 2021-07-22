@@ -111,7 +111,6 @@ class StrangerThings extends React.Component {
     let boolean = false;
     if (string === 'true') { boolean = true; }
     if (boolean) return (<h2>Em desenvolvimento</h2>);
-    console.log('roedei', string);
     return '';
   }
 
@@ -126,8 +125,8 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
-        {this.isUnderDevelopment(underDev)}
         <div className="content strangerfy">
+          {this.isUnderDevelopment(underDev)}
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
