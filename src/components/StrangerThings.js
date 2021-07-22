@@ -112,6 +112,7 @@ class StrangerThings extends React.Component {
   }
 
   render() {
+    console.log(process.env);
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
