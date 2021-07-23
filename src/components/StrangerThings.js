@@ -2,18 +2,26 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
+require('dotenv').config();
+
+const { REACT_APP_HAWKINS_URL } = process.env;
+const { REACT_APP_HAWKINS_TIMEOUT } = process.env;
+
+const { REACT_APP_UPSIDEDOWN_URL } = process.env;
+const { REACT_APP_UPSIDEDOWN_TIMEOUT } = process.env;
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
-  timeout: 30000,
+  url: REACT_APP_HAWKINS_URL,
+  timeout: REACT_APP_HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url: REACT_APP_UPSIDEDOWN_URL,
+  timeout: REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -41,9 +49,7 @@ class StrangerThings extends React.Component {
   }
 
   handleInput(event) {
-    this.setState({
-      characterName: event.target.value,
-    });
+    this.setState({ characterName: event.target.value });
   }
 
   changeRealityClick() {
@@ -56,9 +62,7 @@ class StrangerThings extends React.Component {
 
   searchClick() {
     this.setState(
-      {
-        page: 1,
-      },
+      { page: 1 },
       this.searchCharacter(1),
     );
   }
@@ -109,9 +113,7 @@ class StrangerThings extends React.Component {
     } = this.state;
     return (
       <div
-        className={ `reality ${getRealityClass(
-          hereIsTheUpsideDownWorld,
-        )}` }
+        className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }
       >
         <div className="content strangerfy">
           <div className="change-reality">
