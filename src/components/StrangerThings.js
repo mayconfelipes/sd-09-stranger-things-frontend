@@ -32,8 +32,6 @@ class StrangerThings extends React.Component {
       page: 1,
     };
 
-    console.log(process.env.REACT_APP_HAWKINS_URL);
-
     this.handleInput = this.handleInput.bind(this);
     this.changeRealityClick = this.changeRealityClick.bind(this);
 
@@ -117,6 +115,7 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
+        <h1>Em desenvolvimento</h1>
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
