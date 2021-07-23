@@ -6,6 +6,11 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
+/* PRESTENÇÃO
+  require('dotenv').config();
+  process.env.NOMEDOAMBIENTE
+*/
+
 const strangerThingsConfig = {
   url: 'http://localhost:3002',
   timeout: 30000,
