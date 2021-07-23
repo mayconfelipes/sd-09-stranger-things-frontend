@@ -11,7 +11,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 //
 const strangerThingsConfig = {
-  url: process.env.REACT_APP_HAWKINGS_URL,
+  url: process.env.REACT_APP_HAWKINS_URL,
   timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
 
