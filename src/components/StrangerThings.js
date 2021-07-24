@@ -106,6 +106,7 @@ class StrangerThings extends React.Component {
     );
   }
 
+  // comentario
   render() {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
