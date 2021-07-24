@@ -9,16 +9,6 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
-// const strangerThingsConfig = {
-//   url: 'http://localhost:3002',
-//   timeout: 30000,
-// };
-
-// const upsideDownConfig = {
-//   url: 'http://localhost:3003',
-//   timeout: 30000,
-// };
-
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
   timeout: Number(process.env.REACT_APP_HAWKINS_TIMEOUT),
@@ -127,7 +117,7 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
-          <div className="development">Em desenvolvimento</div>
+          <h1 className="development">Em Desenvolvimento</h1>
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
