@@ -18,7 +18,7 @@ const upsideDownConfig = {
   url: process.env.REACT_APP_UPSIDEDOWN_URL,
   timeout: Number(process.env.REACT_APP_UPSIDEDOWN_TIMEOUT),
 };
-// Ana Karine -  Turma 08 me ajudou com as configurações.
+
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
@@ -117,7 +117,6 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
-          <h1>Em desenvolvimento</h1>
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
