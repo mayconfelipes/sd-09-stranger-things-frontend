@@ -5,7 +5,8 @@ import Table from './Table';
 require('dotenv').config();
 
 const { REACT_APP_HAWKINS_URL, REACT_APP_HAWKINS_TIMEOUT,
-  REACT_APP_UPSIDEDOWN_URL, REACT_APP_UPSIDEDOWN_TIMEOUT } = process.env;
+  REACT_APP_UPSIDEDOWN_URL, REACT_APP_UPSIDEDOWN_TIMEOUT,
+  REACT_APP_ENVIROMENT } = process.env;
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
@@ -118,6 +119,7 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
+        <h1 style={ { color: 'red' } }>{ REACT_APP_ENVIROMENT }</h1>
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
