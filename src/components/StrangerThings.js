@@ -13,6 +13,8 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
+console.log(process.env);
+
 const strangerThingsConfig = {
   url: urlHawkins,
   timeout: timeoutHawkins,
