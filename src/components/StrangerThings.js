@@ -1,20 +1,19 @@
 import React from 'react';
-import env from 'react-dotenv';
+// import env from 'react-dotenv';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
-const urlHawkins = env.REACT_APP_HAWKINS_URL
-const timeoutHawkins = env.REACT_APP_HAWKINS_TIMEOUT
+const urlHawkins = process.env.REACT_APP_HAWKINS_URL
+const timeoutHawkins = process.env.REACT_APP_HAWKINS_TIMEOUT
 
-const urlUpSideDown = env.REACT_APP_UPSIDEDOWN_URL
-const timeoutUpSideDown = env.REACT_APP_UPSIDEDOWN_TIMEOUT
+const urlUpSideDown = process.env.REACT_APP_UPSIDEDOWN_URL
+const timeoutUpSideDown = process.env.REACT_APP_UPSIDEDOWN_TIMEOUT
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
 console.log(process.env, 'Porcesses.env');
-console.log(env, '.env');
 
 const strangerThingsConfig = {
   url: urlHawkins,
