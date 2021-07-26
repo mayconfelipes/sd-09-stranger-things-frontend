@@ -121,7 +121,7 @@ class StrangerThings extends React.Component {
               {' '}
               Mudar de Realidade
             </button>
-            {process.env.REACT_APP_DEVELOPMENT === 'true'
+            {process.env.REACT_APP_DEVELOPMENT !== 'true'
               && <h2>Em desenvolvimento</h2>}
           </div>
 
