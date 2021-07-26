@@ -11,8 +11,6 @@ const {
   REACT_APP_UPSIDEDOWN_TIMEOUT,
 } = process.env;
 
-const DEVELOPMENT = JSON.parse(process.env.DEVELOPMENT) || false;
-
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
@@ -114,17 +112,22 @@ class StrangerThings extends React.Component {
     );
   }
 
+  // Uso de variáveis de ambiente em React, como visto na documentação:
+  // https://create-react-app.dev/docs/adding-custom-environment-variables/
+
   render() {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
+    const { REACT_APP_SERVER_INFO: SERVER_INFO } = process.env;
+    console.log(SERVER_INFO);
     return (
       <div
         className={ `reality ${getRealityClass(
           hereIsTheUpsideDownWorld,
         )}` }
       >
-        { DEVELOPMENT ? <h2>Em desenvolvimento</h2> : <div /> }
+        { SERVER_INFO === 'development' ? <h2>Em desenvolvimento</h2> : <div /> }
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
