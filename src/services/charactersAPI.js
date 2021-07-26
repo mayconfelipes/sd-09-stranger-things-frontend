@@ -20,4 +20,6 @@ class CharactersService {
   }
 }
 
+// pra fazer o primeiro commit e abrir PR
+
 export default CharactersService;
