@@ -135,7 +135,7 @@ class StrangerThings extends React.Component {
             REACT_APP_DEV_MODE === 'development'
             && (
               <div className="dev-mode">
-                *Em desenvolvimento*
+                Em desenvolvimento
               </div>)
           }
           <div>
