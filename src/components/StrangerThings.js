@@ -154,3 +154,4 @@ class StrangerThings extends React.Component {
 }
 
 export default StrangerThings;
+// Não sei, precisava fazer alguma alteração :)
