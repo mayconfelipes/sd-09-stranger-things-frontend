@@ -99,3 +99,10 @@
   width: 900px;
   text-align: left;
 }
+
+.dev-mode {
+  color: #e61013;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-color: aliceblue;
+}

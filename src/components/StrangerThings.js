@@ -12,6 +12,7 @@ const { REACT_APP_HAWKINS_URL,
   REACT_APP_HAWKINS_TIMEOUT,
   REACT_APP_UPSIDEDOWN_URL,
   REACT_APP_UPSIDEDOWN_TIMEOUT,
+  REACT_APP_DEV_MODE,
 } = process.env;
 
 const strangerThingsConfig = {
@@ -130,7 +131,13 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-
+          {
+            REACT_APP_DEV_MODE === 'development'
+            && (
+              <div className="dev-mode">
+                *Em desenvolvimento*
+              </div>)
+          }
           <div>
             <input
               placeholder="Nome do Personagem"
@@ -139,11 +146,9 @@ class StrangerThings extends React.Component {
             />
             <button type="button" onClick={ this.searchClick }>Pesquisar</button>
           </div>
-
           <div>
             <Table characters={ characters } />
           </div>
-
           <div>
             <p>
               Página atual:
