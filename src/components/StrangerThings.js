@@ -12,6 +12,8 @@ console.log(process.env.REACT_APP_HAWKINS_URL);
 
 console.log(process.env.REACT_APP_UPSIDEDOWN_URL);
 
+console.log(process.env.REACT_APP_DEVELOPER_MODE);
+
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
   timeout: parseInt(process.env.REACT_APP_HAWKINS_TIMEOUT, 10),
@@ -44,6 +46,8 @@ class StrangerThings extends React.Component {
 
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
+
+    this.developerMode = this.developerMode.bind(this);
   }
 
   handleInput(event) {
@@ -109,6 +113,15 @@ class StrangerThings extends React.Component {
     );
   }
 
+  developerMode() {
+    const developerOn = process.env.REACT_APP_DEVELOPER_MODE;
+    console.log(typeof developerOn);
+    if (developerOn === 'true') {
+      return <h1>Em desenvolvimento</h1>;
+    }
+    return null;
+  }
+
   render() {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
@@ -119,6 +132,7 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
+        { this.developerMode() }
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
