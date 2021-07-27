@@ -1,19 +1,26 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
-import Table from './Table';
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
+const {
+  REACT_APP_HAWKINS_URL,
+  REACT_APP_HAWKINS_TIMEOUT,
+  REACT_APP_UPSIDEDOWN_URL,
+  REACT_APP_UPSIDEDOWN_TIMEOUT,
+  REACT_APP_DEVELOPMENT,
+} = process.env;
+
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
-  timeout: 30000,
+  url: REACT_APP_HAWKINS_URL,
+  timeout: REACT_APP_HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url: REACT_APP_UPSIDEDOWN_URL,
+  timeout: REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -103,24 +110,37 @@ class StrangerThings extends React.Component {
     );
   }
 
-  render() {
-    const {
-      hereIsTheUpsideDownWorld, characterName, characters, page,
-    } = this.state;
+  renderHeader() {
     return (
-      <div
-        className={ `reality ${getRealityClass(
-          hereIsTheUpsideDownWorld,
-        )}` }
-      >
+      <tr>
+        <th>Nome</th>
+        <th>Origem</th>
+        <th>Status</th>
+      </tr>
+    );
+  }
+
+  renderCharacters(char) {
+    return (
+      <tr key={ char.name }>
+        <td>{char.name}</td>
+        <td>{char.origin}</td>
+        <td>{char.status}</td>
+      </tr>
+    );
+  }
+
+  render() {
+    const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
+    return (
+      <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
+          { REACT_APP_DEVELOPMENT === 'true' ? <h1>Em desenvolvimento</h1> : null }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
-              {' '}
               Mudar de Realidade
             </button>
           </div>
-
           <div>
             <input
               placeholder="Nome do Personagem"
@@ -129,11 +149,16 @@ class StrangerThings extends React.Component {
             />
             <button type="button" onClick={ this.searchClick }>Pesquisar</button>
           </div>
-
           <div>
-            <Table characters={ characters } />
+            <table>
+              <thead>
+                {this.renderHeader()}
+              </thead>
+              <tbody>
+                {characters.map(this.renderCharacters)}
+              </tbody>
+            </table>
           </div>
-
           <div>
             <p>
               Página atual:
