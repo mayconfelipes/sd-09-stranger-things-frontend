@@ -1,6 +1,6 @@
 import React from 'react';
-import CharactersService from '../services/charactersAPI';
 import Table from './Table';
+import CharactersService from '../services/charactersAPI';
 
 const varEnv = process.env;
 
