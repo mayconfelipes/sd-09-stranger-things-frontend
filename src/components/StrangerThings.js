@@ -144,8 +144,8 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.previousPage }>Anterior</button>
             <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
-          <p>Em desenvolvimento</p>
         </div>
+        <p>Em desenvolvimento</p>
       </div>
     );
   }
