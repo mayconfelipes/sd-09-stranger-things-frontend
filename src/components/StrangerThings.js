@@ -1,6 +1,7 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
+import './strangerThings.css';
 
 const convertStringToBoolean = (text) => (text === 'true');
 
@@ -116,6 +117,7 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
+        { developmentMode && <span id="dev-mode">Em desenvolvimento</span> }
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
@@ -148,7 +150,6 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
         </div>
-        { developmentMode && <span id="dev-mode">Em desenvolvimento</span> }
       </div>
     );
   }
