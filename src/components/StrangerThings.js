@@ -2,7 +2,8 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
-console.log(process.env);
+const convertStringToBoolean = (text) => (text === 'true');
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
@@ -108,6 +109,7 @@ class StrangerThings extends React.Component {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
+    const developmentMode = convertStringToBoolean(process.env.REACT_APP_DEV_MODE);
     return (
       <div
         className={ `reality ${getRealityClass(
@@ -146,6 +148,7 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
         </div>
+        { developmentMode && <span id="dev-mode">Em desenvolvimento</span> }
       </div>
     );
   }
