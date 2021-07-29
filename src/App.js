@@ -1,5 +1,7 @@
 import React from 'react';
-require('dotenv/config')
+
+require('dotenv/config');
+
 import './App.css';
 
 import StrangerThings from './components/StrangerThings';
