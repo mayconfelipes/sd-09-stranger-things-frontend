@@ -14,7 +14,7 @@ const strangerThingsConfig = {
 
 const upsideDownConfig = {
   url: process.env.REACT_APP_UPSIDEDOWN_URL,
-  timeout: REACT_APP_UPSIDEDOWN_TIMEOUT,
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
