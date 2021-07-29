@@ -1,7 +1,7 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
-//algo
+// algo
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
