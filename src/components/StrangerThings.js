@@ -35,6 +35,7 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
+      devlopment: true,
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -112,7 +113,7 @@ class StrangerThings extends React.Component {
 
   render() {
     const {
-      hereIsTheUpsideDownWorld, characterName, characters, page,
+      hereIsTheUpsideDownWorld, characterName, characters, page, devlopment,
     } = this.state;
     return (
       <div
@@ -121,6 +122,9 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
+          { (devlopment) && (
+            <p style={ { background: 'red' } }>Em desenvolvimento</p>
+          ) }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
