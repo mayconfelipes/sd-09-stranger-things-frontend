@@ -35,7 +35,7 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
-      devlopment: true,
+      devlopment: false,
     };
 
     this.handleInput = this.handleInput.bind(this);
