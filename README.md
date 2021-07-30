@@ -1,9 +1,4 @@
-# Boas vindas ao repositório frontend do projeto de Deploy - Stranger Things!
-
-Aqui você vai encontrar os locais para colocar suas repostas relativas aos requisitos de frontend.
-
-**Lembre-se**: coloque as respostas apenas dos requisitos que contém o seguinte direcionamento:
-
-  - Adicione os comandos utilizados, de maneira sequencial, ao README do frontend.
-
-**Nota**: Este direcionamento está presente no [repositório](https://github.com/betrybe/sd-0x-stranger-things) em que os requisitos do projeto são destrinchados.
+## Comandos utilizados
+    heroku create pythaqua-ft --remote heroku-ft -b mars/create-react-app  
+    heroku config:set --app pythaqua-ft REACT_APP_HAWKINS_URL="https://pythaqua-bk.herokuapp.com/" REACT_APP_HAWKINS_TIMEOUT=30000 REACT_APP_UPSIDEDOWN_URL="https://pythaqua-bd.herokuapp.com/" REACT_APP_UPSIDEDOWN_TIMEOUT=30000 GITHUB_USER="pythaqua"
+    git push heroku-ft pythaqua-sd-09-stranger-things-frontend:master  
