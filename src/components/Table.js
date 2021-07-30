@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 class Table extends React.Component {
   render() {
     const { characters } = this.props;
+    console.log(characters);
     return (
       <table>
         <thead>
