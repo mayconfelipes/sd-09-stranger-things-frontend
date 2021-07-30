@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <StrangerThings />
-      {/* testando parte 2 */}
     </div>
   );
 }
