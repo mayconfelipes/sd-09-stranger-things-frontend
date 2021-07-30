@@ -1,5 +1,5 @@
 import React from 'react';
-requere('dotenv/config');
+require('dotenv/config');
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
