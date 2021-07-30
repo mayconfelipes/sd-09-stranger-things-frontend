@@ -4,7 +4,7 @@ import Table from './Table';
 require('dotenv/config');
 
 const { REACT_APP_HAWKINS_URL, REACT_APP_HAWKINS_TIMEOUT,REACT_APP_UPSIDEDOWN_URL,
-   REACT_APP_UPSIDEDOWN_TIMEOUT, REACT_APP_TAG } = process.env;
+   REACT_APP_UPSIDEDOWN_TIMEOUT } = process.env;
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
@@ -140,7 +140,7 @@ class StrangerThings extends React.Component {
           <div>
             <p>
               Página atual:
-              {page} {REACT_APP_TAG}
+              {page}
             </p>
           </div>
           <div>
