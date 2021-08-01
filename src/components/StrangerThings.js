@@ -96,7 +96,7 @@ class StrangerThings extends React.Component {
       {
         page: page + 1,
       },
-      () => this.searchChamars / create - react - app.racter(),
+      () => this.searchCharacter(),
     );
   }
 
