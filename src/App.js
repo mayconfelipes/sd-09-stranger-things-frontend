@@ -11,7 +11,7 @@ const TagDev = process.env.TAG_DEV === 'true';
 function App() {
   return (
     <div className="App">
-      { TagComponent && <TagDev /> }
+      { <TagComponent /> && TagDev }
       <StrangerThings />
     </div>
   );
