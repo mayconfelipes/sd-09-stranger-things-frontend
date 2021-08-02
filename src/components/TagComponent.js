@@ -2,7 +2,7 @@ import React from 'react';
 
 const Dev = () => (
   <div>
-    <p>Em desenvolvimento</p>
+    <h1>Em desenvolvimento</h1>
   </div>
 );
 
