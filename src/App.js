@@ -1,7 +1,6 @@
 import React from 'react';
-import './App.css';
-
 import StrangerThings from './components/StrangerThings';
+import './App.css';
 
 function App() {
   return (
