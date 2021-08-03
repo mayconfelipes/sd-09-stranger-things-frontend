@@ -2,17 +2,19 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
+// const { REACT_APP_HAWKINS_URL} = process.env;
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
+  url: 'https://breenolf-bk.herokuapp.com',
   timeout: 30000,
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
+  url: 'https://breenolf-bd.herokuapp.com',
   timeout: 30000,
 };
 
