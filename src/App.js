@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-//oi
+
 import StrangerThings from './components/StrangerThings';
 
 function App() {
