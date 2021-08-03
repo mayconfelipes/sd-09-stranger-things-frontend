@@ -3,14 +3,19 @@ import './App.css';
 
 import StrangerThings from './components/StrangerThings';
 
-const isDevMode = process.env.DEV_MODE || false;
+const isDevMode = process.env.DEV_MODE === 'true';
 
 function App() {
-  return isDevMode ? (<div>Em desenvolvimento</div>) : (
-    <div className="App">
-      <StrangerThings />
-    </div>
-  );
+  return isDevMode
+    ? (
+      <div>
+        <p>Em desenvolvimento</p>
+      </div>)
+    : (
+      <div className="App">
+        <StrangerThings />
+      </div>
+    );
 }
 
 export default App;
