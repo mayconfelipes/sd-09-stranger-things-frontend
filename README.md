@@ -11,6 +11,8 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 heroku create mayconfelipes-ft --buildpack mars/create-react-app
 npm install dotenv
 
+heroku config:set REACT_APP_HAWKINS_TIMEOUT="30000" REACT_APP_HAWKINS_URL="https://mayconfelipes-bd.herokuapp.com/" REACT_APP_UPSIDEDOWN_TIMEOUT="30000" REACT_APP_UPSIDEDOWN_URL="https://mayconfelipes-bk.herokuapp.com" --app mayconfelipes-ft
+
 git checkout -b mayconfelipe-sd-09-stranger-things-frontend
 git commit -am ""
 git push heroku mayconfelipe-sd-09-stranger-things-frontend:master
