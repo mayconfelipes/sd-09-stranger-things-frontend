@@ -4,7 +4,7 @@ import './App.css';
 import StrangerThings from './components/StrangerThings';
 
 const isDevMode = process.env.DEV_MODE === 'true';
-console.log(isDevMode);
+console.log(process.env.DEV_MODE);
 function App() {
   return isDevMode
     ? (
