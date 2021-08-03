@@ -38,6 +38,8 @@ class StrangerThings extends React.Component {
 
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
+
+    this.enviroment = this.enviroment.bind(this);
   }
 
   handleInput(event) {
@@ -103,6 +105,16 @@ class StrangerThings extends React.Component {
     );
   }
 
+  enviroment() {
+    const { REACT_APP_ENVIRONMENTS } = process.env;
+    if (REACT_APP_ENVIRONMENTS === 'production') return;
+    return (
+      <div>
+        <p> Em desenvolvimento </p>
+      </div>
+    );
+  }
+
   render() {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
@@ -114,6 +126,7 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
+          { this.enviroment() }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
