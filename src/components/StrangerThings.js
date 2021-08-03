@@ -135,6 +135,9 @@ class StrangerThings extends React.Component {
           </div>
 
           <div>
+            {
+              process.env.REACT_APP_DEVELOPMENT && <p>Em desenvolvimento</p>
+            }
             <p>
               Página atual:
               {page}
