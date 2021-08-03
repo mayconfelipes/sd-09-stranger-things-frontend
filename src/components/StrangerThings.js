@@ -7,10 +7,7 @@ const {
   REACT_APP_HAWKINS_TIMEOUT,
   REACT_APP_UPSIDEDOWN_URL,
   REACT_APP_UPSIDEDOWN_TIMEOUT,
-  DEV_MODE,
 } = process.env;
-
-const isDevMode = DEV_MODE;
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
@@ -117,7 +114,7 @@ class StrangerThings extends React.Component {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
-    return isDevMode ? (<p>Em desenvolvimento</p>) : (
+    return (
       <div
         className={ `reality ${getRealityClass(
           hereIsTheUpsideDownWorld,
