@@ -16,3 +16,13 @@ heroku config:set REACT_APP_HAWKINS_TIMEOUT="30000" REACT_APP_HAWKINS_URL="https
 git checkout -b mayconfelipe-sd-09-stranger-things-frontend
 git commit -am ""
 git push heroku mayconfelipe-sd-09-stranger-things-frontend:master
+
+git remote rename heroku development  
+git commit -am ""
+git push development mayconfelipe-sd-09-stranger-things-frontend:master
+
+heroku create mayconfelipes-pd 
+
+git remote rename heroku development  
+git commit -am ""
+git push heroku mayconfelipe-sd-09-stranger-things-frontend:master
