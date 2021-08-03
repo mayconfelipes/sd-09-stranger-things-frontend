@@ -7,3 +7,10 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
   - Adicione os comandos utilizados, de maneira sequencial, ao README do frontend.
 
 **Nota**: Este direcionamento está presente no [repositório](https://github.com/betrybe/sd-0x-stranger-things) em que os requisitos do projeto são destrinchados.
+
+heroku create mayconfelipes-ft --buildpack mars/create-react-app
+npm install dotenv
+
+git checkout -b mayconfelipe-sd-09-stranger-things-frontend
+git commit -am ""
+git push heroku mayconfelipe-sd-09-stranger-things-frontend:master
