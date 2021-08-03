@@ -7,7 +7,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3000',
+  url: 'http://fierce-reef-42306.herokuapp.com/',
   timeout: 30000,
 };
 
