@@ -13,7 +13,7 @@ console.log(process.env);
 function App() {
   return (
     <div className="App">
-      {/* Ajuda Ricci e Diógenes no plantão --- Precisava inverter a ordem */}
+      {/* 'Ajuda Ricci e Diógenes no plantão --- Precisava inverter a ordem' */}
       { TagDev && <TagComponent /> }
       <StrangerThings />
     </div>
