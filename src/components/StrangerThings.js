@@ -125,7 +125,7 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
               Mudar de Realidade
-              {Boolean(process.env.REACT_APP_DEV_MODE) && <p> - Em desenvolvimento</p> }
+              {Boolean(process.env.REACT_APP_DEV_MODE) && <p> Em desenvolvimento </p> }
             </button>
           </div>
 
