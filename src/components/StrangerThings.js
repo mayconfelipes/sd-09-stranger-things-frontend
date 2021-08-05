@@ -8,17 +8,13 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
-/* CREDITOS: TRINCA DE 9 - JOAO VICTOR */
-
 const strangerThingsConfig = {
-  url: 'process.env.REACT_APP_HAWKINS_URL',
+  url: process.env.REACT_APP_HAWKINS_URL,
   timeout: 30000,
 };
 
-/* CREDITOS: TRINCA DE 9 - JOAO VICTOR */
-
 const upsideDownConfig = {
-  url: 'process.env.REACT_APP_UPSIDEDOWN_URL',
+  url: process.env.REACT_APP_UPSIDEDOWN_URL,
   timeout: 30000,
 };
 
