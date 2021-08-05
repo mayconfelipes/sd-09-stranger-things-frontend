@@ -2,17 +2,23 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
+require('dotenv').config();
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
+/* CREDITOS: TRINCA DE 9 - JOAO VICTOR */
+
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
+  url: 'process.env.REACT_APP_HAWKINS_URL',
   timeout: 30000,
 };
 
+/* CREDITOS: TRINCA DE 9 - JOAO VICTOR */
+
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
+  url: 'process.env.REACT_APP_UPSIDEDOWN_URL',
   timeout: 30000,
 };
 
