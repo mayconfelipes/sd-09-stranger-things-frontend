@@ -1,22 +1,17 @@
 import React from 'react';
-import './App.css';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-import StrangerThings from './components/StrangerThings';
-import TagComponent from './components/TagComponent';
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
 
-require('dotenv').config();
-
-const TagDev = process.env.REACT_APP_TAG_DEV === 'true';
-console.log(TagDev);
-console.log(process.env);
-
-function App() {
-  return (
-    <div className="App">
-      { TagDev && <TagComponent /> }
-      <StrangerThings />
-    </div>
-  );
-}
-
-export default App;
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
