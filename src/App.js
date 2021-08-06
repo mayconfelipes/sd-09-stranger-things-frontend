@@ -7,7 +7,7 @@ const { REACT_APP_DEV_MODE } = process.env;
 function App() {
   return REACT_APP_DEV_MODE ? (
     <div className="App">
-      <p>Em Desenvolvimento</p>
+      <p>Em desenvolvimento</p>
       <StrangerThings />
     </div>
   ) : (
