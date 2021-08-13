@@ -7,13 +7,13 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
-  timeout: 30000,
+  url: 'https://rodolfo-code-bk.herokuapp.com/',
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url: 'https://rodolfo-code-bd.herokuapp.com',
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
