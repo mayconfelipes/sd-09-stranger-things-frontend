@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-08-13T20:11:24.214Z",
+    "end": "2021-08-13T20:11:39.419Z",
+    "duration": 15205,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "24e3b155-4969-48ed-8d0d-d74e1ee9680b",
+      "title": "",
+      "fullFile": "cypress/integration/developerMode.spec.js",
+      "file": "cypress/integration/developerMode.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "acaf6cd2-f365-48f6-bbee-fe7887f890e7",
+          "title": "3 - Verifica os multi-ambientes e modo de desenvolvimento",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "timedOut": null,
+              "duration": 12352,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL);\ncy.contains(\"Em desenvolvimento\").should(\"exist\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Em desenvolvimento' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Em desenvolvimento' but never did.\n    at Context.eval (https://cleber-teixeira-ft.herokuapp.com/__cypress/tests?p=cypress/integration/developerMode.spec.js:104:39)",
+                "diff": null
+              },
+              "uuid": "8b153b11-ad27-4fa3-a23c-8da82c564191",
+              "parentUUID": "acaf6cd2-f365-48f6-bbee-fe7887f890e7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "timedOut": null,
+              "duration": 749,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL_PROD);\ncy.contains(\"Em desenvolvimento\").should(\"not.exist\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://cleber-teixeira-pd.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://cleber-teixeira-pd.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:158062:25\n    at visitFailedByErr (https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:157432:12)\n    at https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:158042:13\n    at tryCatcher (https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://cleber-teixeira-ft.herokuapp.com/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (https://cleber-teixeira-ft.herokuapp.com/__cypress/tests?p=cypress/integration/developerMode.spec.js:107:8)",
+                "diff": null
+              },
+              "uuid": "7e3cc454-97e7-4e96-8e7f-48dae21f99e8",
+              "parentUUID": "acaf6cd2-f365-48f6-bbee-fe7887f890e7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8b153b11-ad27-4fa3-a23c-8da82c564191",
+            "7e3cc454-97e7-4e96-8e7f-48dae21f99e8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13101,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
